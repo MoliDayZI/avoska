@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <title>Авоська</title>
+</head>
+<body>
+    <header>
+        <nav class="nav_elements">
+            <ul class="nav_logo_elements">
+                <li class="nav_logo"><img src="img/1x/Artboard 1.png"></li>
+                <li>Авоська</li>
+            </ul>
+            <ul class="nav_list">
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="orders.html">Заказы</li>
+            </ul>
+            <ul class="nav_kabinet">
+                <li class="cart_img"><a href="cart.html"><img src="img/cart.png"></a></li>
+                <li class="lk_img"><a href="reg.html"><img src="img/lk.png"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main_info>
+        <p class="page_name">Заказы</p>
+        <div class="orders-container">
+            <div id="orders-list">
+                <p>Заказов не найдено. Перейдите на страницу <a href="catalog.html"><b>"Каталог"</b></a> и добавьте товары в корзину, чтобы оформить заказ.</p>
+            </div>
+        </div>
+        
+        <script>
+            function renderOrders() {
+                const orders = JSON.parse(localStorage.getItem('orders')) || [];
+                const ordersListElement = document.getElementById('orders-list');
+        
+                if (orders.length === 0) {
+                    ordersListElement.innerHTML = '<p>Заказов не найдено.</p>';
+                    return;
+                }
+        
+                ordersListElement.innerHTML = '';
+        
+                orders.forEach((order, index) => {
+                    let orderItemsHtml = '';
+                    order.cart.forEach(item => {
+                        orderItemsHtml += `
+                            <div class="order-item">
+                                <img src="${item.imageUrl}" alt="${item.name}">
+                                <div>
+                                    <h4>${item.name}</h4>
+                                    <p>Цена: ${item.price} Р</p>
+                                    <p>Количество: ${item.quantity} кг</p>
+                                </div>
+                            </div>
+                        `;
+                    });
+        
+                    ordersListElement.innerHTML += `
+                        <div class="order">
+                            <div class="order-header">
+                                <p><b>Заказ №: ${index + 1}</b></p>
+                                <p>Дата оформления: ${order.date}</p>
+                                <p>Адрес доставки: ${order.address}</p>
+                                <p>Номер телефона: ${order.phone}</p>
+                                <p class="order-status">Статус: ${order.status}</p>
+                            </div>
+                            <div class="order-items">
+                                ${orderItemsHtml}
+                            </div>
+                            <div class="order-total">
+                                Итого: ${order.total}
+                            </div>
+                        </div>
+                    `;
+                });
+            }
+        
+            window.onload = function() {
+                renderOrders();
+            };
+        </script>
+        <p class="new_order">Чтобы сформировать новый заказ, перейдите на страницу <a href="catalog.html"><b>"Каталог"</b></a></p>
+        <br><br><br><br><br>
+    </main_info>
+    <footer>
+        <nav class="nav_elements">
+            <ul class="nav_contact_telephone">
+                <li><img src="img/telephone.png"></li>
+                <li>Телефон: +7 (901) 234-56-78</li>
+            </ul>
+            <ul class="nav_list">
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">Обратная связь</a></li>
+                <li><a href="#">Тех. поддержка</a></li>
+            </ul>
+            <ul class="nav_license">
+                <li class="nav_logo"><img src="img/1x/Artboard 1.png"></li>
+                <li>© 2024 Авоська. Все права защищены.</li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>

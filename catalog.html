@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <title>Авоська</title>
+</head>
+<body>
+    <header>
+        <nav class="nav_elements">
+            <ul class="nav_logo_elements">
+                <li class="nav_logo"><img src="img/1x/Artboard 1.png"></li>
+                <li>Авоська</li>
+            </ul>
+            <ul class="nav_list">
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="orders.html">Заказы</li>
+            </ul>
+            <ul class="nav_kabinet">
+                <li class="cart_img"><a href="cart.html"><img src="img/cart.png"></a></li>
+                <li class="lk_img"><a href="reg.html"><img src="img/lk.png"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main_info>
+        <p class="page_name">Каталог</p>
+        <div class="catalog">
+            <div class="items">
+                <div class="items_title">
+                    <p class="items_name"><h1>Овощи</h1></p>
+                    <img src="img/vegetables/1.jpg">
+                    <button class="etc"><a href="vegetables_all.html">Показать все</a></button>
+                </div>
+                <div class="slider">
+                    <div class="item">
+                        <div class="item_img"><img src="img/vegetables/hesnok.png"></div>
+                        <div class="item_name">
+                            <p class="item_name">Чеснок</p>
+                            <p class="item_amount">Цена за 1 кг</p>
+                        </div>
+                        <div class="in_cart">
+                            <p class="price">330 Р</p>
+                            <button onclick="addToCart(1, 'Чеснок', 330, 'img/vegetables/hesnok.png')"><img src="img/cart.png" width="50px", height="50px"></button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img"><img src="img/vegetables/lyk.png"></div>
+                        <div class="item_name">
+                            <p class="item_name">Лук репчатый</p>
+                            <p class="item_amount">Цена за 1 кг</p>
+                        </div>
+                        <div class="in_cart">
+                            <p class="price">39 Р</p>
+                            <button onclick="addToCart(2, 'Лук репчатый', 39, 'img/vegetables/lyk.png')"><img src="img/cart.png" width="50px", height="50px"></button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img"><img src="img/vegetables/kartofel.png"></div>
+                        <div class="item_name">
+                            <p class="item_name">Картофель</p>
+                            <p class="item_amount">Цена за 1 кг</p>
+                        </div>
+                        <div class="in_cart">
+                            <p class="price">44 Р</p>
+                            <button onclick="addToCart(3, 'Картофель', 44, 'img/vegetables/kartofel.png')"><img src="img/cart.png" width="50px", height="50px"></button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img"><img src="img/vegetables/kykyryza.png"></div>
+                        <div class="item_name">
+                            <p class="item_name">Кукуруза</p>
+                            <p class="item_amount">Цена за 1 шт</p>
+                        </div>
+                        <div class="in_cart">
+                            <p class="price">190 Р</p>
+                            <button onclick="addToCart(4, 'Кукуруза', 190, 'img/vegetables/kykyryza.png')"><img src="img/cart.png" width="50px", height="50px"></button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img"><img src="img/vegetables/ogyrets.png"></div>
+                        <div class="item_name">
+                            <p class="item_name">Огурцы</p>
+                            <p class="item_amount">Цена за 1 кг</p>
+                        </div>
+                        <div class="in_cart">
+                            <p class="price">90 Р</p>
+                            <button onclick="addToCart(5, 'Огурцы', 90, 'img/vegetables/ogyrets.png')"><img src="img/cart.png" width="50px", height="50px"></button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img"><img src="img/vegetables/pomidor.png"></div>
+                        <div class="item_name">
+                            <p class="item_name">Помидоры</p>
+                            <p class="item_amount">Цена за 1 кг</p>
+                        </div>
+                        <div class="in_cart">
+                            <p class="price">170 Р</p>
+                            <button onclick="addToCart(6, 'Помидоры', 170, 'img/vegetables/pomidor.png')"><img src="img/cart.png" width="50px", height="50px"></button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img"><img src="img/vegetables/goroh.png"></div>
+                        <div class="item_name">
+                            <p class="item_name">Горох</p>
+                            <p class="item_amount">Цена за 1 кг</p>
+                        </div>
+                        <div class="in_cart">
+                            <p class="price">600 Р</p>
+                            <button onclick="addToCart(7, 'Горох', 600, 'img/vegetables/goroh.png')"><img src="img/cart.png" width="50px", height="50px"></button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img"><img src="img/vegetables/morkov.png"></div>
+                        <div class="item_name">
+                            <p class="item_name">Морковь</p>
+                            <p class="item_amount">Цена за 1 кг</p>
+                        </div>
+                        <div class="in_cart">
+                            <p class="price">110 Р</p>
+                            <button onclick="addToCart(8, 'Морковь', 110, 'img/vegetables/morkov.png')"><img src="img/cart.png" width="50px", height="50px"></button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img"><img src="img/vegetables/kapysta.png"></div>
+                        <div class="item_name">
+                            <p class="item_name">Капуста</p>
+                            <p class="item_amount">Цена за 1 кг</p>
+                        </div>
+                        <div class="in_cart">
+                            <p class="price">150 Р</p>
+                            <button onclick="addToCart(9, 'Капуста', 150, 'img/vegetables/kapysta.png')"><img src="img/cart.png" width="50px", height="50px"></button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img"><img src="img/vegetables/kvashenaya.png"></div>
+                        <div class="item_name">
+                            <p class="item_name">Капуста квашеная</p>
+                            <p class="item_amount">Цена за 1 шт</p>
+                        </div>
+                        <div class="in_cart">
+                            <p class="price">130 Р</p>
+                            <button onclick="addToCart(10, 'Капуста квашеная', 130, 'img/vegetables/kvashenaya.png')"><img src="img/cart.png" width="50px", height="50px"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="catalog">
+            <div class="items">
+                <div class="items_title">
+                    <p class="items_name"><h1>Фрукты</h1></p>
+                    <img src="img/fruits/main.jpg">
+                    <button class="etc"><a href="fruits_all.html">Показать все</a></button>
+                </div>
+                <div class="slider">
+                    <div class="item">
+                        <div class="item_img"><img src="img/fruits/banan.png"></div>
+                        <div class="item_name">
+                            <p class="item_name">Банан</p>
+                            <p class="item_amount">Цена за 1 кг</p>
+                        </div>
+                        <div class="in_cart">
+                            <p class="price">150 Р</p>
+                            <button onclick="addToCart(11, 'Банан', 150, 'img/fruits/banan.png')"><img src="img/cart.png" width="50px", height="50px"></button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img"><img src="img/fruits/abrikos.png"></div>
+                        <div class="item_name">
+                            <p class="item_name">Абрикос</p>
+                            <p class="item_amount">Цена за 1 кг</p>
+                        </div>
+                        <div class="in_cart">
+                            <p class="price">390 Р</p>
+                            <button onclick="addToCart(12, 'Абрикос', 390, 'img/fruits/abrikos.png')"><img src="img/cart.png" width="50px", height="50px"></button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img"><img src="img/fruits/ananas.png"></div>
+                        <div class="item_name">
+                            <p class="item_name">Ананас</p>
+                            <p class="item_amount">Цена за 1 кг</p>
+                        </div>
+                        <div class="in_cart">
+                            <p class="price">300 Р</p>
+                            <button onclick="addToCart(13, 'Ананас', 300, 'img/fruits/ananas.png')"><img src="img/cart.png" width="50px", height="50px"></button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img"><img src="img/fruits/arbys.png"></div>
+                        <div class="item_name">
+                            <p class="item_name">Арбуз</p>
+                            <p class="item_amount">Цена за 1 шт</p>
+                        </div>
+                        <div class="in_cart">
+                            <p class="price">360 Р</p>
+                            <button onclick="addToCart(14, 'Арбуз', 360, 'img/fruits/arbys.png')"><img src="img/cart.png" width="50px", height="50px"></button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img"><img src="img/fruits/mandarin.png"></div>
+                        <div class="item_name">
+                            <p class="item_name">Мандарин</p>
+                            <p class="item_amount">Цена за 1 кг</p>
+                        </div>
+                        <div class="in_cart">
+                            <p class="price">500 Р</p>
+                            <button onclick="addToCart(15, 'Мандарин', 500, 'img/fruits/mandarin.png')"><img src="img/cart.png" width="50px", height="50px"></button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img"><img src="img/fruits/persik.png"></div>
+                        <div class="item_name">
+                            <p class="item_name">Персик</p>
+                            <p class="item_amount">Цена за 1 кг</p>
+                        </div>
+                        <div class="in_cart">
+                            <p class="price">170 Р</p>
+                            <button onclick="addToCart(16, 'Персик', 170, 'img/fruits/persik.png')"><img src="img/cart.png" width="50px", height="50px"></button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img"><img src="img/fruits/apple.png"></div>
+                        <div class="item_name">
+                            <p class="item_name">Яблоко</p>
+                            <p class="item_amount">Цена за 1 кг</p>
+                        </div>
+                        <div class="in_cart">
+                            <p class="price">180 Р</p>
+                            <button onclick="addToCart(17, 'Яблоко', 180, 'img/fruits/apple.png')"><img src="img/cart.png" width="50px", height="50px"></button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img"><img src="img/fruits/avokado.png"></div>
+                        <div class="item_name">
+                            <p class="item_name">Авокадо</p>
+                            <p class="item_amount">Цена за 1 кг</p>
+                        </div>
+                        <div class="in_cart">
+                            <p class="price">290 Р</p>
+                            <button onclick="addToCart(18, 'Авокадо', 290, 'img/fruits/avokado.png')"><img src="img/cart.png" width="50px", height="50px"></button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img"><img src="img/fruits/kivi.png"></div>
+                        <div class="item_name">
+                            <p class="item_name">Киви</p>
+                            <p class="item_amount">Цена за 1 кг</p>
+                        </div>
+                        <div class="in_cart">
+                            <p class="price">480 Р</p>
+                            <button onclick="addToCart(19, 'Киви', 480, 'img/fruits/kivi.png')"><img src="img/cart.png" width="50px", height="50px"></button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img"><img src="img/fruits/limon.png"></div>
+                        <div class="item_name">
+                            <p class="item_name">Лимон</p>
+                            <p class="item_amount">Цена за 1 кг</p>
+                        </div>
+                        <div class="in_cart">
+                            <p class="price">100 Р</p>
+                            <button onclick="addToCart(20, 'Лимон', 100, 'img/fruits/limon.png')"><img src="img/cart.png" width="50px", height="50px"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="catalog">
+            <div class="items">
+                <div class="items_title">
+                    <p class="items_name"><h1>Орехи</h1></p>
+                    <img src="img/orehi/main.png">
+                    <button class="etc"><a href="orehi_all.html">Показать все</a></button>
+                </div>
+                <div class="slider">
+                    <div class="item">
+                        <div class="item_img"><img src="img/orehi/arahis.png"></div>
+                        <div class="item_name">
+                            <p class="item_name">Арахис</p>
+                            <p class="item_amount">Цена за 1 кг</p>
+                        </div>
+                        <div class="in_cart">
+                            <p class="price">150 Р</p>
+                            <button onclick="addToCart(21, 'Арахис', 150, 'img/orehi/arahis.png')"><img src="img/cart.png" width="50px", height="50px"></button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img"><img src="img/orehi/fistashka.png"></div>
+                        <div class="item_name">
+                            <p class="item_name">Фисташки</p>
+                            <p class="item_amount">Цена за 1 кг</p>
+                        </div>
+                        <div class="in_cart">
+                            <p class="price">390 Р</p>
+                            <button onclick="addToCart(22, 'Фисташки', 390, 'img/orehi/fistashka.png')"><img src="img/cart.png" width="50px", height="50px"></button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img"><img src="img/orehi/fyndyk.png"></div>
+                        <div class="item_name">
+                            <p class="item_name">Фундук</p>
+                            <p class="item_amount">Цена за 1 кг</p>
+                        </div>
+                        <div class="in_cart">
+                            <p class="price">300 Р</p>
+                            <button onclick="addToCart(23, 'Фундук', 300, 'img/orehi/fyndyk.png')"><img src="img/cart.png" width="50px", height="50px"></button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img"><img src="img/orehi/gretskiy.png"></div>
+                        <div class="item_name">
+                            <p class="item_name">Грецкий орех</p>
+                            <p class="item_amount">Цена за 1 шт</p>
+                        </div>
+                        <div class="in_cart">
+                            <p class="price">360 Р</p>
+                            <button onclick="addToCart(24, 'Грецкий орех', 360, 'img/orehi/gretskiy.png')"><img src="img/cart.png" width="50px", height="50px"></button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img"><img src="img/orehi/keshiy.png"></div>
+                        <div class="item_name">
+                            <p class="item_name">Кешью</p>
+                            <p class="item_amount">Цена за 1 кг</p>
+                        </div>
+                        <div class="in_cart">
+                            <p class="price">500 Р</p>
+                            <button onclick="addToCart(25, 'Кешью', 500, 'img/orehi/keshiy.png')"><img src="img/cart.png" width="50px", height="50px"></button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img"><img src="img/orehi/mindal.png"></div>
+                        <div class="item_name">
+                            <p class="item_name">Миндаль</p>
+                            <p class="item_amount">Цена за 1 кг</p>
+                        </div>
+                        <div class="in_cart">
+                            <p class="price">170 Р</p>
+                            <button onclick="addToCart(26, 'Миндаль', 170, 'img/orehi/mindal.png')"><img src="img/cart.png" width="50px", height="50px"></button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img"><img src="img/orehi/brazil.jpg"></div>
+                        <div class="item_name">
+                            <p class="item_name">Бразильский орех</p>
+                            <p class="item_amount">Цена за 1 кг</p>
+                        </div>
+                        <div class="in_cart">
+                            <p class="price">180 Р</p>
+                            <button onclick="addToCart(27, 'Бразильский орех', 180, 'img/orehi/brazil.jpg')"><img src="img/cart.png" width="50px", height="50px"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br>
+        <script>
+            function addToCart(id, name, price, imageUrl) {
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const product = cart.find(item => item.id === id);
+                if (product) {
+                    product.quantity += 1;
+                } else {
+                    cart.push({ id, name, price, imageUrl, quantity: 1 });
+                }
+                localStorage.setItem('cart', JSON.stringify(cart));
+                alert(`Товар "${name}" добавлен в корзину!`);
+            }
+            const catalogElement = document.getElementById('catalog');
+
+            // Получение товаров с сервера
+            fetch('/api/products')
+                .then(response => response.json())
+                .then(data => {
+                    data.products.forEach(product => {
+                        const productElement = document.createElement('div');
+                        productElement.classList.add('product');
+                        productElement.innerHTML = `
+                            <img src="${product.image}" alt="${product.name}" onclick="redirectToProduct(${product.id})">
+                            <h2>${product.name}</h2>
+                            <p>${product.description}</p>
+                            <p><strong>${product.price} ₽</strong></p>
+                        `;
+                        catalogElement.appendChild(productElement);
+                    });
+                });
+        </script>
+    </main_info>
+    <footer>
+        <nav class="nav_elements">
+            <ul class="nav_contact_telephone">
+                <li><img src="img/telephone.png"></li>
+                <li>Телефон: +7 (901) 234-56-78</li>
+            </ul>
+            <ul class="nav_list">
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">Обратная связь</a></li>
+                <li><a href="#">Тех. поддержка</a></li>
+            </ul>
+            <ul class="nav_license">
+                <li class="nav_logo"><img src="img/1x/Artboard 1.png"></li>
+                <li>© 2024 Авоська. Все права защищены.</li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
